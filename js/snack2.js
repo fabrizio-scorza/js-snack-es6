@@ -60,6 +60,15 @@ console.log(studentsUpperCased);
 //creare una lista di tutti gli studenti con voti superiori a 70
 const studentsGradeMoreThan70 = students.filter((element) => element.grades > 70);
 
+//versione con if esteso 
+// let studentGradeMoreThan70 = student.filter((element) =>{
+//     if(element.grades > 70){
+//         return true;
+//     } else {
+//         return false;
+//     }
+// })
+
 console.log(studentsGradeMoreThan70);
 
 //creare una lista di tutti gli studenti con voti superiori a 70 e id superiore a 120
