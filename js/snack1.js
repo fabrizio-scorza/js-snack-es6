@@ -43,3 +43,20 @@ function generatePlaceholders(thisTable, thisName, thisSpot){
     }   //object
     return placeholder;
 }
+
+
+// VERSIONE CON MAP 
+// inizializzazione dell'array tavolo vip 
+const tavoloVip2ThVersion = [ 'Brad Pitt', 'Johnny Depp', 'Lady Gaga', 'Cristiano Ronaldo', 'Georgina Rodriguez', 'Chiara Ferragni', 'Fedez', 'George Clooney','Amal Clooney','Maneskin' ];  //array<string>
+
+//utilizzo il metodo map sull'array per rimapparlo
+const placeholdersMapped = tavoloVip2ThVersion.map((element,i) =>{
+    // dichiaro una variabile segnaposto
+    const placeholder = {
+        tableName: 'Tavolo Vip',
+        name: element,
+        spot: i+1     
+    }
+    return placeholder
+})
+console.log(placeholdersMapped);
