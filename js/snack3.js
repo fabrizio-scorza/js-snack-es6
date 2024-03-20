@@ -5,19 +5,19 @@
 //creo l'array di oggetti inserendo le propietà richieste
 const bikes = [
     {
-        name: `Sava 700`,
+        name: 'Sava 700',
         weight: 9.6,
     },
     {
-        name: `Bianchi Oltre XR4`,
+        name: 'Bianchi Oltre XR4',
         weight: 7.1,
     },
     {
-        name: `Cannondale SuperSix Evo`,
+        name: 'Cannondale SuperSix Evo',
         weight: 7.3,
     },
     {
-        name: `Pinarello Angliru`,
+        name: 'Pinarello Angliru',
         weight: 7.4,
     },
 ];  //array <object>
@@ -25,7 +25,7 @@ const bikes = [
 console.log(bikes)
 
 // dichiaro una variabile peso più basso inizializzata a 100 che mi servirà a trovare la bici più leggera
-let lowestWeight = 100; //number
+let lowestWeight = Infinity; //number
 
 //confronto per ogni elemento dell'array se il peso è il più leggero  
 bikes.forEach(({weight}) => {
@@ -41,6 +41,8 @@ console.log(lowestWeight);
 let lowestWeightBike = bikes.find((bike) => bike.weight = lowestWeight);
 console.log(lowestWeightBike);
 
-//cewrco l'oggetto con destrutturazione 
-lowestWeight = bikes.find(({name, weight}) => weight = lowestWeight);
-console.log(lowestWeightBike);
+// stampo a console la bici che pesa meno con destructuring e template literal
+const {name, weight} = lowestWeightBike;
+
+console.log(`La bici che pesa mento è la ${name}`);
+console.log(`con un peso di ${weight} kg.`)
