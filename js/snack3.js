@@ -25,20 +25,15 @@ const bikes = [
 console.log(bikes)
 
 // dichiaro una variabile peso più basso inizializzata a 100 che mi servirà a trovare la bici più leggera
-let lowestWeight = Infinity; //number
+let lowestWeightBike = bikes[0]; //number
 
 //confronto per ogni elemento dell'array se il peso è il più leggero  
-bikes.forEach(({weight}) => {
-    if(weight < lowestWeight){
+bikes.forEach((bike) => {
+    if(bike.weight < lowestWeightBike.weight){
         // se è il più leggero lo aassegno alla variabile lowest weight
-        lowestWeight = weight;   //number
+        lowestWeightBike = bike;   //number
     }
-    return lowestWeight;
 })
-console.log(lowestWeight);
-
-// cerco l'oggetto corrispondente al peso più basso senza destrutturazione 
-let lowestWeightBike = bikes.find((bike) => bike.weight = lowestWeight);
 console.log(lowestWeightBike);
 
 // stampo a console la bici che pesa meno con destructuring e template literal
