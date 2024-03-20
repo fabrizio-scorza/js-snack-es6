@@ -34,12 +34,22 @@ let teams = [
 ]; 
 
 //genero random punti fatti e falli subiti per ogni squadra presente nell'array
-teams.forEach((team) => {
-    team.points = randomNumberMinMax(1, 50);    
-    team.fouls = randomNumberMinMax (1, 15);  
+teams.forEach((team) => {  
+    team.points = randomNumberMinMax(1, 50);
+    team.fouls = randomNumberMinMax (1, 15);
 });
 
+const teamsNameAndFouls = teams.map((team) => {
+    const teamFauls = {
+    name:team.name,
+    fouls: team.fouls,
+    }
+    return teamFauls;
+})
+
 console.log (teams);
+console.log (teamsNameAndFouls);
+
 // funzione che genera numeri random da un minimo ad un massimo
 function randomNumberMinMax(min, max){
     const minCeiled = Math.ceil(min); //number
