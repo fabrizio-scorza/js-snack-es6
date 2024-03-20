@@ -28,10 +28,10 @@ console.log(bikes)
 let lowestWeight = 100; //number
 
 //confronto per ogni elemento dell'array se il peso è il più leggero  
-bikes.forEach((object) => {
-    if(object.weight < lowestWeight){
+bikes.forEach(({weight}) => {
+    if(weight < lowestWeight){
         // se è il più leggero lo aassegno alla variabile lowest weight
-        lowestWeight = object.weight;   //number
+        lowestWeight = weight;   //number
     }
     return lowestWeight;
 })
