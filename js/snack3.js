@@ -41,3 +41,16 @@ const {name, weight} = lowestWeightBike;
 
 console.log(`La bici che pesa mento è la ${name}`);
 console.log(`con un peso di ${weight} kg.`)
+
+//ORDINARE LE BICI DALLA PIù LEGGERA ALLA PIù PESANTE 
+const sortedBikes = bikes.toSorted((bike1, bike2) => {
+    if(bike1.weight < bike2.weight){
+        return -1;
+    } else if (bike1.weight > bike2.weight){
+        return 0;
+    } 
+//in caso di numeri possiamo usare direttamente usare la sottrazione se il ritorno e negativo bici1 sarà più leggera viceversa se positivo bici 1 sarà più pesante
+// return bike1.wheight - bike2.weight;
+//controllo che possiamo metterte direttamente dopo la arrow function
+})
+console.log(sortedBikes);
